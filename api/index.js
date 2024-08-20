@@ -17,6 +17,7 @@ app.get('/menssagens', (req, res) =>{
 app.post('/menssagens', (req, res) =>{
     const { nome , menssagem} = req.body;
     menssagens.push({nome: nome, menssagem: menssagem});
+    console.log(nome);
     res.status(201).json({menssagem: 'Deu boa'});
 });
 
